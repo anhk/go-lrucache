@@ -2,7 +2,7 @@
  * 一个基于内存的缓存模块
  **/
 
-package mycache
+package lrucache
 
 import (
 	"sync"
@@ -15,7 +15,7 @@ type Cache struct {
 }
 
 func New(size int, duration time.Duration) (*Cache, error) {
-	lru, err := NewLRU(size, duration)
+	lru, err := newLRU(size, duration)
 	if err != nil {
 		return nil, err
 	}

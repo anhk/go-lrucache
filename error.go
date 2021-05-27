@@ -1,4 +1,4 @@
-package mycache
+package lrucache
 
 import (
 	"fmt"

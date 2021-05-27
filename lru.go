@@ -2,7 +2,7 @@
  *
  **/
 
-package mycache
+package lrucache
 
 import (
 	"container/list"
@@ -30,7 +30,7 @@ type LRU struct {
 	duration  time.Duration /** 到期间隔，单位：秒 **/
 }
 
-func NewLRU(size int, duration time.Duration) (*LRU, error) {
+func newLRU(size int, duration time.Duration) (*LRU, error) {
 	if size <= 0 {
 		return nil, errors.New("Must provide a positive size")
 	}
