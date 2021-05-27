@@ -1,1 +1,1 @@
-module "github.com/anhk/lrucache"
+module "github.com/anhk/go-lrucache"
